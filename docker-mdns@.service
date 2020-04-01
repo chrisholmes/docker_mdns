@@ -1,7 +1,7 @@
 [Unit]
 Description=Docker service announcing on mDNS on %i
-Requires=docker.service
-After=docker.service
+Requires=docker.service avahi-daemon.service
+After=docker.service avahi-daemon.service
 
 [Service]
 Restart=always
