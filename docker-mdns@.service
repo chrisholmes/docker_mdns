@@ -1,0 +1,12 @@
+[Unit]
+Description=Docker service announcing on mDNS on %i
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+
+ExecStart=/usr/local/bin/docker_mdns %i
+
+[Install]
+WantedBy=multi-user.target

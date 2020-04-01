@@ -1,0 +1,6 @@
+version: 1.0
+shards:
+  dbus:
+    github: oprypin/crystal-dbus
+    commit: dd744b951dc2bc12399ac518f3a042965f64392b
+
