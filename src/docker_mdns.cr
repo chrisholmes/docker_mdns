@@ -23,8 +23,10 @@ module DockerMdns
 
   announcer = Announcer.new(interface)
 
+  puts "Processing existing services"
   announcer.process_existing(DockerSock.new.list_containers)
 
+  puts "Processing new services"
   DockerSock.new.stream_events do |event|
     if event["Type"] != "container"
       next
